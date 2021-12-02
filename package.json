@@ -1,0 +1,43 @@
+{
+	"name": "electron-app",
+	"version": "1.0.0",
+	"description": "",
+	"author": "Gypsophlia",
+	"main": "index.js",
+	"scripts": {
+		"test": "echo \"Error: no test specified\" && exit 1",
+		"start": "electronmon .",
+		"build-icon": "electron-icon-builder --input=./src/img/icon.png --output=build --flatten",
+		"pack": "electron-builder"
+	},
+	"license": "ISC",
+	"dependencies": {
+		"electron-store": "^8.0.1"
+	},
+	"devDependencies": {
+		"electron": "^16.0.3",
+		"electron-builder": "^22.14.5",
+		"electron-icon-builder": "^2.0.1",
+		"electronmon": "^2.0.2"
+	},
+	"build": {
+		"productName": "Eask",
+		"appId": "This.is.Eask",
+		"copyright": "CopyRight © 2021 Gypsophlia",
+		"directories": {
+			"buildResources": "build",
+			"output": "dist"
+		},
+		"win": {
+			"target": [
+				"nsis"
+			],
+			"icon": "build/icons/icon.ico"
+		},
+		"nsis": {
+			"oneClick": false,
+			"perMachine": true,
+			"allowToChangeInstallationDirectory": true
+		}
+	}
+}

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<link rel="stylesheet" href="./css/index.css">
+</head>
+
+<body>
+	<div class="topbar">
+		<div class="app-name"></div>
+		<svg class="close" id="close" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewbox="0 0 20 20">
+			<path d="M0 0 L20 20" stroke="black" fill="transparent" stroke-width="2" />
+			<path d="M0 20 L20 0" stroke="black" fill="transparent" stroke-width="2" />
+		</svg>
+	</div>
+	<div class="main">
+		<div class="left">
+			<img class="logo" src="./img/icon.png" alt="">
+			<ul class="func-list">
+				<li class="func func-title func-title_action" data-index="1">未完成</li>
+				<li class="func func-title" data-index="2">已完成</li>
+			</ul>
+			<div class="time"></div>
+		</div>
+		<div class="right">
+			<div class="right-top">
+				<h3>任务列表</h3>
+				<svg class="func" data-index="3" xmlns="http://www.w3.org/2000/svg" width="35" height="35"
+					viewbox="0 0 35 35">
+					<path d="M2 17 a15 15 0 1 0 30 0" stroke="skyblue" fill="transparent" stroke-width="2" />
+					<path d="M2 17 a15 15 0 1 1 30 0" stroke="skyblue" fill="transparent" stroke-width="2" />
+					<path d="M6 17 H28 M17 6 V28" stroke="skyblue" stroke-width="2"></path>
+				</svg>
+			</div>
+			<div class="uncomplete page page_active" data-index="1">
+				<ul class="tasks" id="uncompleted">
+				</ul>
+			</div>
+			<div class="completed page" data-index="2">
+				<ul class="tasks" id="completed">
+					<li class="task">
+						<div class="task-content">
+							<span class="task-ddl">12:30</span>&nbsp;
+							<span class="task-text">完成一个TodoList</span>
+						</div>
+						<div class="task-button">
+							已完成
+						</div>
+					</li>
+				</ul>
+				<div class="clearComplete">清空</div>
+			</div>
+			<div class="add-todo page" data-index="3">
+				<div class="title">
+					<label for="">内容</label>
+					<input type="text" id="taskContent" class="title" placeholder="内容">
+				</div>
+				<div class="date">
+					<label for="">截至</label>
+					<input type="datetime-local" id="taskDate">
+				</div>
+				<button class="btn-add-todo" id="func-add-todo">添加</button>
+			</div>
+		</div>
+	</div>
+	<script src="./js/index.js"></script>
+</body>
+
+</html>

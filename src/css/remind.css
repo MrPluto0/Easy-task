@@ -1,0 +1,38 @@
+* {
+	margin: 0;
+	bottom: 0;
+}
+
+#close {
+	position: absolute;
+	right: 10px;
+	top: 10px;
+}
+
+.main {
+	height: 100vh;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	background: linear-gradient(to right bottom,skyblue,white);
+}
+
+.date {
+	font-size: 30px;
+	font-weight: bold;
+}
+
+.remind {
+	font-size: 18px;
+}
+
+.get {
+	margin-top: 30px;
+	font-weight: bold;
+	background-color: rgb(47, 186, 241);
+	border-radius: 5px;
+	color: white;
+	padding: 5px 10px;
+	cursor: pointer;
+}
